@@ -38,7 +38,8 @@ public class DisplayMessagesToWriterTest {
     @Test
     public void price() throws Exception {
         final StringWriter canvas = new StringWriter();
-
+        // THIS STINKS, because to test a format of number we need to create whole bunch of other classes
+        // -> create separate text class (groovy)
         new WriterDisplay(canvas).displayPrice(Price.cents(198));
 
         Assert.assertEquals(

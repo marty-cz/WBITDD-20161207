@@ -1,13 +1,13 @@
 package ca.jbrains.pos.test.model.data;
 
 import ca.jbrains.pos.model.data.Price;
-import ca.jbrains.pos.view.WriterDisplay
-import spock.lang.Specification
-import spock.lang.Unroll
+import ca.jbrains.pos.view.WriterDisplay;
+import spock.lang.Specification;
+import spock.lang.Unroll;
 
 class FormatPriceTest extends Specification {
     @Unroll("Format €#price.euro()")
-    def "format price"() {
+    def "format euro price"() {
         expect:
         text == new WriterDisplay(null).formatPrice(price)
 
