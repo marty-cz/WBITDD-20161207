@@ -1,11 +1,12 @@
-package ca.jbrains.pos.test;
+package ca.jbrains.pos.test.controller.command;
 
-import ca.jbrains.pos.CommandInterpreter;
-import ca.jbrains.pos.ConsumeTextCommands;
 import org.jmock.Expectations;
 import org.jmock.integration.junit4.JUnitRuleMockery;
 import org.junit.Rule;
 import org.junit.Test;
+
+import ca.jbrains.pos.controller.command.CommandInterpreter;
+import ca.jbrains.pos.controller.command.ConsumeTextCommands;
 
 import java.io.StringReader;
 

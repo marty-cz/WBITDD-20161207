@@ -1,14 +1,14 @@
-package ca.jbrains.pos;
+package ca.jbrains.pos.view;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
 
-import ca.jbrains.pos.Display;
-import ca.jbrains.pos.Price;
+import ca.jbrains.pos.model.data.Price;
+import ca.jbrains.pos.view.IDisplay;
 
-public class WriterDisplay implements Display {
+public class WriterDisplay implements IDisplay {
 	
 	private final PrintWriter writer;
 	

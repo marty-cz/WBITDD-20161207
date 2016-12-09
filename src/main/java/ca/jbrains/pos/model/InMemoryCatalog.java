@@ -1,8 +1,10 @@
-package ca.jbrains.pos;
+package ca.jbrains.pos.model;
 
 import com.google.common.collect.ImmutableMap;
 
-public class InMemoryCatalog implements Catalog {
+import ca.jbrains.pos.model.data.Price;
+
+public class InMemoryCatalog implements ICatalog {
     private final ImmutableMap<String, Price> pricesByBarcode;
 
     public InMemoryCatalog(ImmutableMap<String, Price> pricesByBarcode) {

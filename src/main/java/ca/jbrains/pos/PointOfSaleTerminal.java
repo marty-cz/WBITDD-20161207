@@ -2,6 +2,12 @@ package ca.jbrains.pos;
 
 import com.google.common.collect.ImmutableMap;
 
+import ca.jbrains.pos.controller.command.ConsumeTextCommands;
+import ca.jbrains.pos.controller.SellOneItemController;
+import ca.jbrains.pos.model.InMemoryCatalog;
+import ca.jbrains.pos.model.data.Price;
+import ca.jbrains.pos.view.WriterDisplay;
+
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 

@@ -1,14 +1,15 @@
-package ca.jbrains.pos.test;
+package ca.jbrains.pos.test.model;
 
-import ca.jbrains.pos.Catalog;
-import ca.jbrains.pos.InMemoryCatalog;
-import ca.jbrains.pos.Price;
 import com.google.common.collect.ImmutableMap;
+
+import ca.jbrains.pos.model.ICatalog;
+import ca.jbrains.pos.model.InMemoryCatalog;
+import ca.jbrains.pos.model.data.Price;
 
 public class FindPriceInMemoryCatalogTest extends FindPriceInCatalogContract {
 
     @Override
-    protected Catalog catalogWith(String barcode, Price matchingPrice) {
+    protected ICatalog catalogWith(String barcode, Price matchingPrice) {
         return new InMemoryCatalog(ImmutableMap.of(
                 "not " + barcode, Price.cents(0),
                 barcode, matchingPrice,
@@ -17,7 +18,7 @@ public class FindPriceInMemoryCatalogTest extends FindPriceInCatalogContract {
     }
 
     @Override
-    protected Catalog catalogWithout(String barcodeToAvoid) {
+    protected ICatalog catalogWithout(String barcodeToAvoid) {
         return new InMemoryCatalog(ImmutableMap.of(
                 "not " + barcodeToAvoid, Price.cents(1),
                 "still not " + barcodeToAvoid, Price.cents(2),

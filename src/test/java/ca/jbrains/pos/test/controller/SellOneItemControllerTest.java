@@ -1,9 +1,10 @@
-package ca.jbrains.pos.test;
+package ca.jbrains.pos.test.controller;
 
-import ca.jbrains.pos.Catalog;
-import ca.jbrains.pos.Display;
-import ca.jbrains.pos.Price;
-import ca.jbrains.pos.SellOneItemController;
+import ca.jbrains.pos.controller.SellOneItemController;
+import ca.jbrains.pos.model.ICatalog;
+import ca.jbrains.pos.model.data.Price;
+import ca.jbrains.pos.view.IDisplay;
+
 import org.jmock.Expectations;
 import org.jmock.integration.junit4.JUnitRuleMockery;
 import org.junit.Rule;
@@ -15,8 +16,8 @@ public class SellOneItemControllerTest {
 
     @Test
     public void productFound() throws Exception {
-        final Catalog catalog = context.mock(Catalog.class);
-        final Display display = context.mock(Display.class);
+        final ICatalog catalog = context.mock(ICatalog.class);
+        final IDisplay display = context.mock(IDisplay.class);
         final SellOneItemController controller = new SellOneItemController(catalog, display);
 
         context.checking(new Expectations() {{
@@ -31,8 +32,8 @@ public class SellOneItemControllerTest {
 
     @Test
     public void productNotFound() throws Exception {
-        final Catalog catalog = context.mock(Catalog.class);
-        final Display display = context.mock(Display.class);
+        final ICatalog catalog = context.mock(ICatalog.class);
+        final IDisplay display = context.mock(IDisplay.class);
         final SellOneItemController controller = new SellOneItemController(catalog, display);
 
         context.checking(new Expectations() {{

@@ -1,4 +1,4 @@
-package ca.jbrains.pos;
+package ca.jbrains.pos.controller.command;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,6 +1,8 @@
-package ca.jbrains.pos;
+package ca.jbrains.pos.view;
 
-public interface Display {
+import ca.jbrains.pos.model.data.Price;
+
+public interface IDisplay {
     void displayPrice(Price price);
 
     void displayProductNotFoundMessage(String barcodeNotFound);
