@@ -3,6 +3,7 @@ package ca.jbrains.pos;
 import com.google.common.collect.ImmutableMap;
 
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class PointOfSaleTerminal {
     public static void main(String[] args) {
@@ -14,7 +15,7 @@ public class PointOfSaleTerminal {
                                         "7070529026686", Price.cents(125)
                                 )
                         ),
-                        new WriterDisplay()
+                        new WriterDisplay(new OutputStreamWriter(System.out))
                 )::onBarcode
         ).consume(new InputStreamReader(System.in));
     }
