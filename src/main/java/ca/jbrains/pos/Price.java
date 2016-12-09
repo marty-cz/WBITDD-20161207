@@ -6,7 +6,7 @@ import lombok.Value;
 public class Price {
     private final int centsValue;
 
-    public double euro() {
+	public double euro() {
         return getCentsValue() / 100.0d;
     }
 }
